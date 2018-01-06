@@ -325,12 +325,13 @@
       }
       function showGitment() {
         $("#gitment_title").attr("style", "display:none");
+        $("#comments").addClass("bg-white");
         $("#container").attr("style", "").addClass("gitment_container");
         var gitment = new Gitment({
           id: window.location.pathname,
           theme: myTheme,
           owner: '20948105',
-          repo: 'https://github.com/zhiyuchangxin/zhiyuchangxin.github.io/issues',
+          repo: 'https://github.com/zhiyuchangxin/zhiyuchangxin.net/issues',
           oauth: {
             client_id: '418e924c1d9148c327db',
             client_secret: '389394a50f2b0597d47ead0340448bf4a1d0a7ee'

@@ -1078,6 +1078,17 @@ pre .javascript .function {
   cursor: pointer;
   font-size: 14px;
 }
+.gitment-comments-init-btn,
+.gitment-editor-submit {
+  border-radius: 5px;
+}
+.comments {
+  margin: 50px 0 0 0;
+  padding: 10px 20px;
+}
+.night-mode .comments.bg-white {
+  background: #fff;
+}
 .tag-cloud {
   text-align: center;
 }
@@ -1866,7 +1877,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff54ff;
+  background: #ff04e9;
 }
 .links-of-blogroll {
   font-size: 13px;
