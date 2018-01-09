@@ -1086,8 +1086,24 @@ pre .javascript .function {
   margin: 50px 0 0 0;
   padding: 10px 20px;
 }
-.night-mode .comments.bg-white {
+.night-mode .comments .gitment-header-like-btn,
+.night-mode .comments .gitment-header-issue-link,
+.night-mode .comments .gitment-editor-footer-tip,
+.night-mode .comments .gitment-footer-container {
+  color: #fff;
+}
+.night-mode .comments .gitment-editor-avatar {
+  border: 1px solid #fff;
   background: #fff;
+}
+.night-mode .comments .gitment-editor-header {
+  background: #eee;
+}
+.night-mode .comments .gitment-editor-body {
+  background: #fff;
+}
+.night-mode .comments .gitment-comments-error {
+  color: #f00;
 }
 .tag-cloud {
   text-align: center;
@@ -1877,7 +1893,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff04e9;
+  background: #ff6211;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2965,15 +2981,19 @@ code {
 .highlight,
 pre {
   margin: 5px 0;
-  padding: 5px;
+  padding: 0 5px;
 }
 .highlight,
 code,
 pre {
-  padding: 5px;
+  padding: 0 5px;
 }
 .highlight .gutter pre {
   background-color: #1d1f21;
+}
+.highlight {
+  border-radius: 3px;
+  opacity: 0.8;
 }
 .snow-box {
   display: none;
@@ -2992,12 +3012,12 @@ canvas {
   position: fixed;
   top: 50%;
   left: 15px;
-  margin-top: -54px;
+  margin-top: -65px;
   z-index: 2;
 }
 .self-btns span {
   display: block;
-  margin: 8px;
+  margin: 15px;
   width: 42px;
   height: 42px;
   line-height: 42px;
@@ -3097,10 +3117,17 @@ canvas {
   color: #87daff;
 }
 @media (max-width: 767px) {
+  body {
+    position: relative;
+  }
   .snow-box {
     display: none !important;
   }
   .self-btns {
+    margin-top: 0;
+  }
+  .self-btns span.btn-snow,
+  .self-btns span.btn-stop {
     display: none !important;
   }
   .btn-bar {
