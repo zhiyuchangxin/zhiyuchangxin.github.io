@@ -84,7 +84,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="诗酒趁年华" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="刹那芳华" type="application/atom+xml" />
 
 
 
@@ -101,7 +101,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建免费博客">
 <meta property="og:url" content="http://yoursite.com/2017/12/29/first/index.html">
-<meta property="og:site_name" content="诗酒趁年华">
+<meta property="og:site_name" content="刹那芳华">
 <meta property="og:description" content="我的第一页扬帆起航双旦快乐哟！ 1$ hello world!">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-31T09:14:52.000Z">
@@ -125,9 +125,9 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
+      applicationID: 'LVROV1FQK0',
+      apiKey: '3039a5edcdb70beebcc80c968fd63a06',
+      indexName: 'zhiyuchangxin',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -142,7 +142,7 @@
 
 
 
-  <title>搭建免费博客 | 诗酒趁年华</title>
+  <title>搭建免费博客 | 刹那芳华</title>
   
 
 
@@ -160,7 +160,7 @@
 
 </head>
 
-<body class="night-mode" itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body class="" itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -178,7 +178,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">诗酒趁年华</span>
+        <span class="site-title">刹那芳华</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -236,9 +236,45 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -276,7 +312,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="诗酒趁年华">
+      <meta itemprop="name" content="刹那芳华">
     </span>
 
     
@@ -367,9 +403,9 @@
 
     <div>
       
-        <div>
+        <div class="page-end-flag">
   
-    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    <div class="info">&nbsp;-------------本文结束&nbsp;<i class="fa fa-paw"></i>&nbsp;感谢您的阅读-------------</div>
   
 </div>
 
@@ -535,7 +571,7 @@
                alt="织语长心" />
           <p class="site-author-name" itemprop="name">织语长心</p>
            
-              <p class="site-description motion-element" itemprop="description">在小小的梦的暖阁，为你收藏整季的烟雨。</p>
+              <p class="site-description motion-element" itemprop="description">小小的梦的暖阁里，为你收藏起整季的烟雨。</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -783,6 +819,19 @@
 
 
 
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
+
+
 
   
 
@@ -803,8 +852,8 @@
 
   <div class="self-btns drag-items">
     <span id="btn-sun" class="btn-sun">☀️</span>
-    <span id="btn-moon" class="btn-moon">🌛&nbsp;</span>
-    <span id="btn-snow" class="btn-snow">❄️&nbsp;</span>
+    <span id="btn-moon" class="btn-moon">🌛</span>
+    <span id="btn-snow" class="btn-snow">❄️</span>
     <span id="btn-stop" class="btn-stop">停</span>
   </div>
 

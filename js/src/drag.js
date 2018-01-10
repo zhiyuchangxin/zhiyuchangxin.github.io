@@ -34,6 +34,13 @@ function moving() {
   }
 }
 
+/**
+ * 手指离开屏幕
+ */
+function up() {
+  isTouch = false;
+}
+
 /** 
  * 格式化拖动的位置，控制在可见区域内
  */
