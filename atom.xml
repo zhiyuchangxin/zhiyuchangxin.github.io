@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>One Peace</title>
+  <title>One Piece</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-10T17:27:09.000Z</updated>
+  <updated>2018-02-11T17:42:42.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2017 年终寄语</title>
-    <link href="http://yoursite.com/2018/01/01/first/"/>
-    <id>http://yoursite.com/2018/01/01/first/</id>
-    <published>2018-01-01T11:03:34.000Z</published>
-    <updated>2018-02-10T17:27:09.000Z</updated>
+    <title>2017 年终总结</title>
+    <link href="http://yoursite.com/2018/01/18/first/"/>
+    <id>http://yoursite.com/2018/01/18/first/</id>
+    <published>2018-01-18T14:08:00.000Z</published>
+    <updated>2018-02-11T17:42:42.000Z</updated>
     
-    <content type="html"><![CDATA[<p>&emsp;&emsp;我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭<a id="more"></a>我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭</p><table><thead><tr><th style="text-align:center">a</th><th style="text-align:center">b</th><th style="text-align:center">c</th></tr></thead><tbody><tr><td style="text-align:center">小姐姐</td><td style="text-align:center">小妹妹</td><td style="text-align:center">真开心啊哈哈</td></tr><tr><td style="text-align:center">哈哈</td><td style="text-align:center">嘿嘿</td><td style="text-align:center">呵~</td></tr></tbody></table><p><img src="http://ow73fkxqs.bkt.clouddn.com/doraemon.png" alt="机器猫" title="哆啦A梦"></p>]]></content>
+    <content type="html"><![CDATA[<p>2018 就这样悄悄地的来了，是我忽略了太多的征兆吗，现在才嗅到它的气息，而亏欠了 2017 的句点，就在此时补上吧。<br>2017，特别又特别的一年。这一年的北京微露清纯，少了雾霾的困扰，呈现出更加优雅的姿态；这一年的我稍显庞杂，没了学校的庇护，显露出略微复杂的心理；这一年的北京异常寒冷，这一年的我尤为忙碌；此去无雪，经年有“学”。</p><a id="more"></a><h3 id="回顾-2017"><a href="#回顾-2017" class="headerlink" title="回顾 2017"></a>回顾 2017</h3><p>17 年的既定的目标是在项目中提升自身的能力，脱离前端小白的队伍，能够作出一些成绩。我想最终我只完成了上半部分，在项目中提升自己，后半部分还有待提高。下面主要介绍下使用的技术和承担的项目：</p><p>年初时跟组内的小伙伴合作了一个 vue 的 web 端项目，当时只是纯粹的写写业务，至于框架、接口等都是别人搭好的，并没有深入研究。之后主要还是负责 H5 应用的前端开发。大概的统计了一下，一年下来承担的应用差不多有十个。</p><p>一开始使用的 vue1.0 + vue-router + vue-resource + webpack + ES6 等开发的项目，对于技术，慢慢的由不熟悉到熟悉，经过一两个项目的洗礼后开始独立承担项目。随着 vue2.0 发布并日趋成熟，开始尝试使用 vue2 + vue-router + vuex + webpack + ES6 来开发，vue2 项目换用了组内开发的组件库，很遗憾自己没有参与到组件的研发过程中去 :(</p><blockquote><p>回首向来萧瑟处，归去，也无风雨也无晴。</p></blockquote><p>马不停蹄的工作，进步是有的，但丢掉了总结与进一步学习的时间，最终，日子归于平淡了。</p><p><img src="http://ow73fkxqs.bkt.clouddn.com/doraemon.png" alt="机器猫" title="哆啦A梦"></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&amp;emsp;&amp;emsp;我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭我给大家讲个故事吧，从前有一只丑小鸭
+      &lt;p&gt;2018 就这样悄悄地的来了，是我忽略了太多的征兆吗，现在才嗅到它的气息，而亏欠了 2017 的句点，就在此时补上吧。&lt;br&gt;2017，特别又特别的一年。这一年的北京微露清纯，少了雾霾的困扰，呈现出更加优雅的姿态；这一年的我稍显庞杂，没了学校的庇护，显露出略微复杂的心理；这一年的北京异常寒冷，这一年的我尤为忙碌；此去无雪，经年有“学”。&lt;/p&gt;
     
     </summary>
     
