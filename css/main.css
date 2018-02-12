@@ -1894,7 +1894,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e9e047;
+  background: #e7b896;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3141,6 +3141,14 @@ pre {
 blockquote {
   color: #999;
 }
+table {
+  table-layout: auto;
+}
+caption,
+th,
+td {
+  padding: 3px 8px;
+}
 th {
   border-bottom-width: 1px;
 }
@@ -3275,6 +3283,10 @@ canvas {
 .night-mode .footer {
   background: #444;
   color: #bbb;
+}
+.night-mode table>tbody>tr:nth-of-type(odd),
+.night-mode table>tbody>tr:hover {
+  background: #555;
 }
 .night-mode .menu-item a:hover {
   color: #87daff;

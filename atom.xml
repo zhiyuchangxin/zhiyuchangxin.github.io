@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-11T17:42:42.000Z</updated>
+  <updated>2018-02-12T08:37:03.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,36 +21,18 @@
     <link href="http://yoursite.com/2018/01/18/first/"/>
     <id>http://yoursite.com/2018/01/18/first/</id>
     <published>2018-01-18T14:08:00.000Z</published>
-    <updated>2018-02-11T17:42:42.000Z</updated>
+    <updated>2018-02-12T08:37:03.000Z</updated>
     
-    <content type="html"><![CDATA[<p>2018 就这样悄悄地的来了，是我忽略了太多的征兆吗，现在才嗅到它的气息，而亏欠了 2017 的句点，就在此时补上吧。<br>2017，特别又特别的一年。这一年的北京微露清纯，少了雾霾的困扰，呈现出更加优雅的姿态；这一年的我稍显庞杂，没了学校的庇护，显露出略微复杂的心理；这一年的北京异常寒冷，这一年的我尤为忙碌；此去无雪，经年有“学”。</p><a id="more"></a><h3 id="回顾-2017"><a href="#回顾-2017" class="headerlink" title="回顾 2017"></a>回顾 2017</h3><p>17 年的既定的目标是在项目中提升自身的能力，脱离前端小白的队伍，能够作出一些成绩。我想最终我只完成了上半部分，在项目中提升自己，后半部分还有待提高。下面主要介绍下使用的技术和承担的项目：</p><p>年初时跟组内的小伙伴合作了一个 vue 的 web 端项目，当时只是纯粹的写写业务，至于框架、接口等都是别人搭好的，并没有深入研究。之后主要还是负责 H5 应用的前端开发。大概的统计了一下，一年下来承担的应用差不多有十个。</p><p>一开始使用的 vue1.0 + vue-router + vue-resource + webpack + ES6 等开发的项目，对于技术，慢慢的由不熟悉到熟悉，经过一两个项目的洗礼后开始独立承担项目。随着 vue2.0 发布并日趋成熟，开始尝试使用 vue2 + vue-router + vuex + webpack + ES6 来开发，vue2 项目换用了组内开发的组件库，很遗憾自己没有参与到组件的研发过程中去 :(</p><blockquote><p>回首向来萧瑟处，归去，也无风雨也无晴。</p></blockquote><p>马不停蹄的工作，进步是有的，但丢掉了总结与进一步学习的时间，最终，日子归于平淡了。</p><p><img src="http://ow73fkxqs.bkt.clouddn.com/doraemon.png" alt="机器猫" title="哆啦A梦"></p>]]></content>
+    <content type="html"><![CDATA[<p>2018 就这样悄悄地的来了，是我忽略了太多的征兆吗，现在才感觉到它的气息，亏欠了 2017 的那个句点，是时候该画上了。<br>2017，特别又特别的一年。这一年的北京微露清纯，少了雾霾的困扰，呈现出更加优雅的姿态；这一年的我稍显庞杂，没了学校的庇护，流露出略微复杂的心情；这一年的北京异常寒冷，这一年的我尤为忙碌；奈何此去无雪，向来经年有“学”。没控制住，文艺病又犯病了，那通俗点吧，这一年也许成长的不太明显，但我知道这是必经的旅行。</p><a id="more"></a><h3 id="2017-回眸一笑"><a href="#2017-回眸一笑" class="headerlink" title="2017 回眸一笑"></a>2017 回眸一笑</h3><p>17 年，我的既定目标是：在项目中提升自身的能力，努力脱掉前端小白的称号，最好能够折腾出一些有趣的东西。接近尾声了，只能说还算顺利的完成了前半段的计划——在项目中提升自己，至于后半段路——有意义的东西还没见踪影，需要继续加油啦。</p><h4 id="17-年的工作情况："><a href="#17-年的工作情况：" class="headerlink" title="17 年的工作情况："></a>17 年的工作情况：</h4><ol><li><strong>web 端项目：</strong>年初参与了组内第一个使用 vue 开发的 web 端项目。当时的我只是纯粹的写写业务，对于接口文档、项目配置、路由跳转等并未做深入的研究。之后 web 端项目接触的也越来越少。</li><li><strong>H5 项目：</strong>3/4 的时间都在做 H5 应用，独立承担的 H5 应用大概有七个。<ul><li>初期：使用 vue1 进行研发。对于技术，慢慢的由不熟悉到熟悉，经过一两个项目的洗礼后开始独立承担项目。</li><li>后期：随着 vue2 发布并日趋成熟，开始尝试使用 vue2 进行开发，vue2 项目换用了组内开发的组件库，很遗憾自己没有参与到组件的研发过程中去 :(</li></ul></li><li><strong>其他：</strong>穿插着切图、网站研发等其他任务</li></ol><h4 id="17-年的学习成果："><a href="#17-年的学习成果：" class="headerlink" title="17 年的学习成果："></a>17 年的学习成果：</h4><p>这一年主要还是在开发过程中成长，遇到问题查阅文档，逛社区、论坛，或者同小伙伴交流，寻找思路。业余时间太少，总结做的还不到位，只能展示出项目中用到的技术了。</p><table><thead><tr><th style="text-align:center"></th><th style="text-align:left">技术</th><th style="text-align:left">优劣分析</th><th style="text-align:center">掌握程度</th></tr></thead><tbody><tr><td style="text-align:center">切图</td><td style="text-align:left">Html5、Css3、JS、Jquery…</td><td style="text-align:left">Css3 掌握的稍微好一些</td><td style="text-align:center">★★★★★</td></tr><tr><td style="text-align:center">网站研发</td><td style="text-align:left">Html、Css、JS、Jquery、Freemarker、Java…</td><td style="text-align:left">Java 仅做了解</td><td style="text-align:center">★★★★☆</td></tr><tr><td style="text-align:center">vue1</td><td style="text-align:left">vue、vue-router、vue-resource、webpack、ES6…</td><td style="text-align:left">熟练掌握 vue1，掌握 webpack、ES6</td><td style="text-align:center">★★★★☆</td></tr><tr><td style="text-align:center">vue2</td><td style="text-align:left">vue、vuex、vue-router、webpack、ES6…</td><td style="text-align:left">熟练掌握 vue2，掌握 webpack、ES6</td><td style="text-align:center">★★★★☆</td></tr></tbody></table><h4 id="17-年的生活状态："><a href="#17-年的生活状态：" class="headerlink" title="17 年的生活状态："></a>17 年的生活状态：</h4><p>有一群志同道合的小伙伴，闲暇之余能聚在一起聊聊技术、谈谈理想，很开心、很珍惜。曾一度嚷嚷着要成立一个翻译小分队，专门翻译感觉不错的外文文献来着，最终搁浅了吧（囧），新的一年希望还能搭上我们的“翻译号”，真的扬帆<del>去流浪</del>哟！</p><p>有几个爱念叨却很仗义的闺蜜，有一个默默给与温暖与支持的伴侣，有一间面积很大的屋子（虽然是租的），感觉再养一只小萨摩生活就完美了。</p><blockquote><p>回首向来萧瑟处，归去，也无风雨也无晴。</p></blockquote><p>哈哈，苏轼乱入一下，确实很喜欢这种态度。马不停蹄的工作了一年，进步还是有的，但少了总结与深入学习的时间，收获跟预期还有些许差距，需要继续努力啦。</p><h3 id="2018-翘首以待"><a href="#2018-翘首以待" class="headerlink" title="2018 翘首以待"></a>2018 翘首以待</h3><p>首先想说，不管工作多忙，都要给自己预留时间做好总结，这是需要一定的技术支持和抗压能力的。能在拓宽广度的同时挖掘事物的深度，让一切变得通透明了，这样才能给自己更大的提升空间。<br>其次呢，更要学会抽离自己，超出工作本身去做一些令自己欣喜的事情。比如学习之余写写博文，比如让我们的“翻译号”再次扬帆，比如在 github 上做一些有趣的东西，比如静下心来练练书法……只有自己的眼光变得足够开阔了，才能装得下更美好的风景。</p><p>希望有一天我的脑袋能变得像“哆啦A梦”的万能口袋那样，什么新奇美好的东西都装得下，作一程序媛如此，我也就满意啦！</p><p><img src="http://ow73fkxqs.bkt.clouddn.com/doraemon.png" alt="机器猫" title="哆啦A梦"></p><p>打个小广告，这是我养的一只<a href="https://github.com/zhiyuchangxin/doraemon" target="_blank" rel="noopener">哆啦A梦</a>哟，想见它吗，快点点看!</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;2018 就这样悄悄地的来了，是我忽略了太多的征兆吗，现在才嗅到它的气息，而亏欠了 2017 的句点，就在此时补上吧。&lt;br&gt;2017，特别又特别的一年。这一年的北京微露清纯，少了雾霾的困扰，呈现出更加优雅的姿态；这一年的我稍显庞杂，没了学校的庇护，显露出略微复杂的心理；这一年的北京异常寒冷，这一年的我尤为忙碌；此去无雪，经年有“学”。&lt;/p&gt;
+      &lt;p&gt;2018 就这样悄悄地的来了，是我忽略了太多的征兆吗，现在才感觉到它的气息，亏欠了 2017 的那个句点，是时候该画上了。&lt;br&gt;2017，特别又特别的一年。这一年的北京微露清纯，少了雾霾的困扰，呈现出更加优雅的姿态；这一年的我稍显庞杂，没了学校的庇护，流露出略微复杂的心情；这一年的北京异常寒冷，这一年的我尤为忙碌；奈何此去无雪，向来经年有“学”。没控制住，文艺病又犯病了，那通俗点吧，这一年也许成长的不太明显，但我知道这是必经的旅行。&lt;/p&gt;
     
     </summary>
     
     
       <category term="thinking" scheme="http://yoursite.com/tags/thinking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/12/29/hello-world/"/>
-    <id>http://yoursite.com/2017/12/29/hello-world/</id>
-    <published>2017-12-29T07:10:43.000Z</published>
-    <updated>2018-02-10T15:52:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
