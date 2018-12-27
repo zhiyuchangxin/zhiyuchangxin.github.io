@@ -1894,7 +1894,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ec9320;
+  background: #089e22;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3343,8 +3343,8 @@ canvas {
   margin-top: 60px;
   background: rgba(100,100,100,0.4) none repeat scroll !important;
 }
-.night-mode .posts-expand .post {
-  padding: 25px;
+.night-mode .post-block {
+  padding: 30px;
   box-sizing: border-box;
 }
 .night-mode code {
@@ -3367,8 +3367,8 @@ canvas {
   margin-top: 60px;
   background: rgba(250,250,250,0.7) none repeat scroll !important;
 }
-.day-mode .posts-expand .post {
-  padding: 25px;
+.day-mode .post-block {
+  padding: 30px;
   box-sizing: border-box;
 }
 .day-mode .highlight {
