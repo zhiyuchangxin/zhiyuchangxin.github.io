@@ -21,13 +21,13 @@ snowStopObj.addEventListener('click', function () {
 sunObj.addEventListener('click', function () {
   sunObj.style.display = 'none';
   moonObj.style.display = 'block';
-  toggleClass(bodyWrap, "night-mode");
+  toggleClass(bodyWrap, "night-mode", "day-mode");
 });
 // 夜间模式
 moonObj.addEventListener('click', function () {
   moonObj.style.display = 'none';
   sunObj.style.display = 'block';
-  toggleClass(bodyWrap, "night-mode");
+  toggleClass(bodyWrap, "day-mode", "night-mode");
 });
 
 /**
@@ -49,11 +49,9 @@ function removeClass(ele, cls) {
     ele.className = ele.className.replace(reg, "");
   }
 }
-function toggleClass(ele,cls) { 
+function toggleClass(ele,cls,als) { 
   if(hasClass(ele,cls)) { 
-    removeClass(ele, cls); 
+    removeClass(ele, cls);
+    addClass(ele, als);
   }
-  else { 
-    addClass(ele, cls); 
-  } 
 }

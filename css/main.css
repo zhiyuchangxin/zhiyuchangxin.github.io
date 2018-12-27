@@ -434,7 +434,7 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: 800px;
+  width: 880px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -446,7 +446,7 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: 800px;
+  width: 880px;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
@@ -463,7 +463,7 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: 800px;
+  width: 880px;
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
@@ -1894,7 +1894,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e7b896;
+  background: #ec9320;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3162,14 +3162,15 @@ th {
 .page-home .post-body .post-gallery {
   width: 180px;
   display: table-cell;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .page-home .post-body .post-gallery + p {
   padding-left: 10px;
 }
 .page-home .post-gallery .post-gallery-img img {
   width: 100%;
-  height: 168px;
+  max-height: 168px;
+  vertical-align: middle;
 }
 .page-post-detail .post-gallery {
   display: none;
@@ -3230,10 +3231,10 @@ canvas {
   display: none;
 }
 .self-btns span.btn-sun {
-  display: none;
+  display: block;
 }
 .self-btns span.btn-moon {
-  display: block;
+  display: none;
 }
 .self-btns span:hover {
   -webkit-transform: scale(1.1);
@@ -3270,6 +3271,19 @@ canvas {
 .night-mode {
   background: #333;
   color: #bbb;
+  color: #bbb;
+}
+.night-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("http://cdn.zhiyuchangxin.cn/hzw-now1.png") no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
 }
 .night-mode a {
   color: #bbb;
@@ -3323,6 +3337,42 @@ canvas {
 .night-mode .post-button .btn:hover {
   background: transparent;
   color: #999;
+}
+.night-mode .content {
+  border-radius: 10px;
+  margin-top: 60px;
+  background: rgba(100,100,100,0.4) none repeat scroll !important;
+}
+.night-mode .posts-expand .post {
+  padding: 25px;
+  box-sizing: border-box;
+}
+.night-mode code {
+  background: #666;
+}
+.day-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("http://cdn.zhiyuchangxin.cn/hzw-now1.png") no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+  z-index: -1;
+}
+.day-mode .content {
+  border-radius: 10px;
+  margin-top: 60px;
+  background: rgba(250,250,250,0.7) none repeat scroll !important;
+}
+.day-mode .posts-expand .post {
+  padding: 25px;
+  box-sizing: border-box;
+}
+.day-mode .highlight {
+  opacity: 0.9;
 }
 @media (max-width: 767px) {
   body {

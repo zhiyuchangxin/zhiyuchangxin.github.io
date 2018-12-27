@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="One Piece" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://cdn.zhiyuchangxin.cn/chery-tab.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="一晃时间走了好远，又一年教师节了，在此祝所有老师教师节快乐！言归正传，为何提笔写此文呢？前两天在项目中给某个节点A设置 fixed 定位后出现了一个神奇的现象：无论我怎么设置其子节点B的层级，B总是会被A之后出现的任意带有层级的元素节点遮挡。我仿佛发现了新大陆一般惊奇，平日里对待熟悉的事物我总能做到恰到好处的蜻蜓点水，终于掉坑里了吧(囧)。于是乎，我决定今天要彻底弄懂层叠上下文（Stacking">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谁还没遇上“层叠上下文”呢">
+<meta property="og:url" content="http://yoursite.com/2018/09/10/StackingContext/index.html">
+<meta property="og:site_name" content="One Piece">
+<meta property="og:description" content="一晃时间走了好远，又一年教师节了，在此祝所有老师教师节快乐！言归正传，为何提笔写此文呢？前两天在项目中给某个节点A设置 fixed 定位后出现了一个神奇的现象：无论我怎么设置其子节点B的层级，B总是会被A之后出现的任意带有层级的元素节点遮挡。我仿佛发现了新大陆一般惊奇，平日里对待熟悉的事物我总能做到恰到好处的蜻蜓点水，终于掉坑里了吧(囧)。于是乎，我决定今天要彻底弄懂层叠上下文（Stacking">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://cdn.zhiyuchangxin.cn/high.png">
+<meta property="og:updated_time" content="2018-12-27T09:35:56.472Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="谁还没遇上“层叠上下文”呢">
+<meta name="twitter:description" content="一晃时间走了好远，又一年教师节了，在此祝所有老师教师节快乐！言归正传，为何提笔写此文呢？前两天在项目中给某个节点A设置 fixed 定位后出现了一个神奇的现象：无论我怎么设置其子节点B的层级，B总是会被A之后出现的任意带有层级的元素节点遮挡。我仿佛发现了新大陆一般惊奇，平日里对待熟悉的事物我总能做到恰到好处的蜻蜓点水，终于掉坑里了吧(囧)。于是乎，我决定今天要彻底弄懂层叠上下文（Stacking">
+<meta name="twitter:image" content="http://cdn.zhiyuchangxin.cn/high.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'LBF3ZWNHKR',
+      apiKey: 'afdf11d5760c75eaa989d34425f05d8a',
+      indexName: 'zhiyuchangxin',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/09/10/StackingContext/"/>
+
+
+
+
+
+  <title>谁还没遇上“层叠上下文”呢 | One Piece</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body class="night-mode" itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">One Piece</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/10/StackingContext/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="织语长心">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://cdn.zhiyuchangxin.cn/qb_01.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="One Piece">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">谁还没遇上“层叠上下文”呢</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-10T15:00:00+08:00">
+                2018-09-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="http://cdn.zhiyuchangxin.cn/high.png" rel="gallery_cjq6mq2kf0001u40iat4qc7rc"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="http://cdn.zhiyuchangxin.cn/high.png" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <p>一晃时间走了好远，又一年教师节了，在此祝所有老师教师节快乐！<br>言归正传，为何提笔写此文呢？前两天在项目中给某个节点A设置 fixed 定位后出现了一个神奇的现象：无论我怎么设置其子节点B的层级，B总是会被A之后出现的任意带有层级的元素节点遮挡。<br>我仿佛发现了新大陆一般惊奇，平日里对待熟悉的事物我总能做到恰到好处的蜻蜓点水，终于掉坑里了吧(囧)。于是乎，我决定今天要彻底弄懂层叠上下文（Stacking Context）。</p>
+<a id="more"></a>
+<p>还是先来看一下我遇到的问题吧~<br>分别用<strong><code>chrome/firefox</code></strong>和<strong><code>IE</code></strong>打开<a href="https://codepen.io/zhiyuchangxin/pen/LXNLRb" target="_blank"><code>DEMO1</code></a></p>
+<p><img src="http://cdn.zhiyuchangxin.cn/stack-noie.png?imageMogr2/thumbnail/400x/blur/1x0/quality/75|watermark/2/text/QOe7h-ivremVv-W_gw==/font/5a6L5L2T/fontsize/240/fill/I0UxRTFFMQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="非IE浏览器" title="非IE浏览器"></p>
+<p><img src="http://cdn.zhiyuchangxin.cn/stack-ie.png?imageMogr2/thumbnail/400x/blur/1x0/quality/75|watermark/2/text/QOe7h-ivremVv-W_gw==/font/5a6L5L2T/fontsize/240/fill/I0UxRTFFMQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="IE浏览器" title="IE浏览器"></p>
+<p>哇~为什么IE上的表现和我们的预期一致，而 chrome/firefox 上却出现了异常呢？<br>如果你也跟我一样好奇，那咱们就快点开始这次旅行吧~</p>
+<blockquote>
+<p>文中所有 IE 浏览器除特殊标明包含 IE7 外 均指 IE7 以上</p>
+</blockquote>
+<h3 id="一、层叠界的术语"><a href="#一、层叠界的术语" class="headerlink" title="一、层叠界的术语"></a>一、层叠界的术语</h3><ol>
+<li><strong>Z轴</strong>：眼睛垂直于屏幕的一条虚拟的轴线</li>
+<li><strong>层叠上下文(Stacking Context)</strong>：表示元素在z轴上的层叠水平（<code>html</code>的三维概念）</li>
+<li><strong>层叠顺序(Stacking Order)</strong>：表示同一层叠上下文中的元素在z轴上的显示顺序</li>
+</ol>
+<blockquote>
+<p>重要的事说三遍：<br>所有层叠水平的比较都是以<strong>同一层叠上下文</strong>为基础的哟~<br><strong>同一层叠上下文</strong>为基础的哟~<br><strong>同一层叠上下文</strong>~</p>
+</blockquote>
+<h3 id="二、层叠准则（前提：同一层叠上下文中做比较）"><a href="#二、层叠准则（前提：同一层叠上下文中做比较）" class="headerlink" title="二、层叠准则（前提：同一层叠上下文中做比较）"></a>二、层叠准则（前提：同一层叠上下文中做比较）</h3><ol>
+<li><strong>谁大谁上</strong>：非同一层叠水平时，水平高的在上面</li>
+<li><strong>后来居上</strong>：同一层叠水平时，后出现的在上面</li>
+</ol>
+<h3 id="三、层叠上下文的特性"><a href="#三、层叠上下文的特性" class="headerlink" title="三、层叠上下文的特性"></a>三、层叠上下文的特性</h3><ol>
+<li><strong>层叠上下文</strong>的层叠水平要比<strong>普通元素</strong>高</li>
+<li>层叠上下文可以<strong><em>嵌套</em></strong>：内部层叠上下文及其所有子元素均受制于外部的层叠上下文</li>
+<li>每个层叠上下文和兄弟元素<strong><em>独立</em></strong>：当进行层叠变化或渲染的时候，只需考虑后代元素</li>
+<li>每个层叠上下文<strong><em>自成体系</em></strong>：当元素发生层叠的时候，整个元素被认为在<strong><em>父层叠上下文的层叠顺序中</em></strong></li>
+<li>层叠上下文可以<strong><em>阻断</em></strong>元素的混合模式</li>
+</ol>
+<h3 id="四、层叠上下文的创建"><a href="#四、层叠上下文的创建" class="headerlink" title="四、层叠上下文的创建"></a>四、层叠上下文的创建</h3><ol>
+<li><strong>天生派(根元素)</strong>：页面的根元素<code>&lt;html&gt;</code>天生具有层叠上下文</li>
+<li><strong>正统派(传统)</strong>：<code>z-index</code>为<strong>数值</strong>的<strong>定位/布局元素</strong><ul>
+<li>IE7 定位/布局元素直接生成层叠上下文，因为IE7的<code>z-index</code>默认值就是<code>0</code></li>
+</ul>
+</li>
+<li><strong>扩招派(新秀)</strong>：<strong>CSS3</strong> 属性产生的层叠上下文</li>
+</ol>
+<h4 id="正统派层叠上下文创建"><a href="#正统派层叠上下文创建" class="headerlink" title="正统派层叠上下文创建"></a>正统派层叠上下文创建</h4><ol>
+<li><strong><em><code>position: relative/absolute</code></em></strong>定位：<ul>
+<li><code>z-index: !auto</code> 创建</li>
+</ul>
+</li>
+<li><strong><em><code>position: fixed</code></em></strong>定位：<ul>
+<li>「IE 内核的浏览器」<code>z-index: !auto</code> 创建</li>
+<li>非「IE 内核的浏览器」直接创建（这就是 DEMO1 中异常现象产生的根源）</li>
+</ul>
+</li>
+<li><strong><em><code>position: sticky</code></em></strong>定位时 ？？？<ul>
+<li>sticky定位根据当前定位状态综合1，2两种情况</li>
+</ul>
+</li>
+</ol>
+<h4 id="扩招派层叠上下文创建"><a href="#扩招派层叠上下文创建" class="headerlink" title="扩招派层叠上下文创建"></a>扩招派层叠上下文创建</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">display:flex|inline-flex 弹性布局的元素：其”子元素“z-index != auto 创建</span><br><span class="line">元素的 opacity: !1</span><br><span class="line">元素的 transform: !none</span><br><span class="line">元素的 perspective != none // 透视效果</span><br><span class="line">元素的 filter: !none</span><br><span class="line">元素的 mix-blend-mode: !normal // 元素和白色背景混合，IE 不支持</span><br><span class="line">元素的 isolation: isolate // 阻隔混合模式</span><br><span class="line">元素的 will-change 属性值为 transform... // 增强页面渲染性能</span><br><span class="line">元素的 -webkit-overflow-scrolling: touch</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+<p>层叠的表现可以看<a href="https://codepen.io/zhiyuchangxin/pen/YRqxXO" target="_blank"><code>DEMO2</code></a></p>
+<h3 id="五、层叠顺序（Stacking-Order）"><a href="#五、层叠顺序（Stacking-Order）" class="headerlink" title="五、层叠顺序（Stacking Order）"></a>五、层叠顺序（Stacking Order）</h3><p>顾名思义，层叠顺序即元素在 Z 轴上的显示顺序。<br>参照了张鑫旭对层叠顺序的图解，加之自己理解后，重新绘制了<strong><code>同一层叠上下文</code></strong>前提下的<strong><code>9级层叠顺序图</code></strong>，如下：<br><a href="https://codepen.io/zhiyuchangxin/pen/RqarRv" target="_blank"><code>DEMO3</code></a></p>
+<p><img src="http://cdn.zhiyuchangxin.cn/stacking-order1.png?imageMogr2/thumbnail/650x/blur/1x0/quality/75|watermark/2/text/QOe7h-ivremVv-W_gw==/font/5a6L5L2T/fontsize/240/fill/I0UxRTFFMQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="层叠顺序" title="层叠顺序示意图"></p>
+<blockquote>
+<p>DEMO3 是我对9级层叠顺序图进行的校验，如过大家发现存在什么问题可以随时联系我~</p>
+</blockquote>
+<h4 id="思考两个问题"><a href="#思考两个问题" class="headerlink" title="思考两个问题"></a>思考两个问题</h4><ol>
+<li>为什么内联元素（第6级）的层叠顺序比浮动元素（第5级）和块状元素（第4级）高？<ul>
+<li>因为最初的最初我们所做的所有工作都是为展示图文信息做准备的，后来的诸多变化也未曾脱离这个源头</li>
+</ul>
+</li>
+<li>为什么定位元素会在普通元素之上展示？<ul>
+<li>从图中可见定位元素跑到了第7级水平，高于普通元素</li>
+</ul>
+</li>
+</ol>
+<h4 id="看图划重点啦："><a href="#看图划重点啦：" class="headerlink" title="看图划重点啦："></a>看图划重点啦：</h4><ol>
+<li>当父级元素未生成自己的层叠上下文时，只需给<code>z-index</code>设置为负值即可实现元素的隐藏；</li>
+<li>单纯从<strong>层叠水平</strong>来看，<code>z-index</code>的血统比其他方式生成层叠上下文的血统更纯正些；<ul>
+<li>因为<code>z-index</code>除了设置为<code>auto/0</code>（与其他层叠上下文同级）外，还可以显性的设置大于 0 的值</li>
+</ul>
+</li>
+<li>当<code>transform: translateZ(&gt;0)</code>出现后，<code>z-index</code>再想超越其层级就有些难度啦；<ul>
+<li>由上图可见<code>transform: translateZ(&gt;0)</code>在最高级了</li>
+</ul>
+</li>
+<li>虽有难度，但依然可以超越。只需给<code>非body</code>祖先元素添加<code>overflow:hidden</code>样式<code>z-index</code>就能重拾老大的称号~<ul>
+<li>这是因为当给<code>非body</code>祖先元素添加了<code>overflow:hidden</code>后，<code>transform</code>便失去了其独特的魔法，此时的它乖乖地回到了第7级水平。</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://codepen.io/zhiyuchangxin/pen/RqarRv" target="_blank"><code>DEMO3</code></a>给<code>.bg-box 添加 overflow: hidden;</code>可以验证一下第四点</p>
+<h3 id="六、改变层叠顺序"><a href="#六、改变层叠顺序" class="headerlink" title="六、改变层叠顺序"></a>六、改变层叠顺序</h3><h4 id="不产生层叠上下文的前提下："><a href="#不产生层叠上下文的前提下：" class="headerlink" title="不产生层叠上下文的前提下："></a>不产生层叠上下文的前提下：</h4><h5 id="1-调整DOM结构"><a href="#1-调整DOM结构" class="headerlink" title="(1) 调整DOM结构"></a>(1) 调整<code>DOM</code>结构</h5><ul>
+<li>后来居上准则</li>
+</ul>
+<h5 id="2-添加非z-index相关的属性"><a href="#2-添加非z-index相关的属性" class="headerlink" title="(2) 添加非z-index相关的属性"></a>(2) 添加<code>非z-index</code>相关的属性</h5><ul>
+<li>block、float、inline、inline-block、定位…</li>
+</ul>
+<h4 id="产生层叠上下文的前提下："><a href="#产生层叠上下文的前提下：" class="headerlink" title="产生层叠上下文的前提下："></a>产生层叠上下文的前提下：</h4><h5 id="1-z-index问鼎天下"><a href="#1-z-index问鼎天下" class="headerlink" title="(1) z-index问鼎天下"></a>(1) <code>z-index</code>问鼎天下</h5><ul>
+<li><code>z-index</code>设置层级须在定位元素<code>position:!static</code>或父元素弹性布局<code>display:flex</code>时生效，其值越大层叠水平越高；</li>
+<li><strong>非IE7</strong>的定位元素默认添加<code>z-index:auto</code>属性；<a href="https://codepen.io/zhiyuchangxin/pen/MqrNJJ" target="_blank"><code>DEMO4</code></a></li>
+</ul>
+<p><img src="http://cdn.zhiyuchangxin.cn/fixed-before.gif?imageMogr2/thumbnail/300x/blur/1x0/quality/75|watermark/2/text/QOe7h-ivremVv-W_gw==/font/5a6L5L2T/fontsize/240/fill/I0UxRTFFMQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="设置fixed" title="fixed 的兄弟元素未设置定位(position=static)"></p>
+<p><img src="http://cdn.zhiyuchangxin.cn/fixed-after.gif?imageMogr2/thumbnail/300x/blur/1x0/quality/75|watermark/2/text/QOe7h-ivremVv-W_gw==/font/5a6L5L2T/fontsize/240/fill/I0UxRTFFMQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="设置fixed" title="fixed 的兄弟元素设置定位(eg: position=relative)"></p>
+<blockquote>
+<p>现象：我们给 fixed 的相邻兄弟元素添加了 position: relative 后再滚动页面，发现 fixed 元素被遮住了！！！<br>原因：同时设置定位后，元素均处于层叠顺序的第7级，处于同一层叠水平上，加之“后来居上”准则得此结果。</p>
+</blockquote>
+<ul>
+<li><strong>IE7</strong>的定位元素默认添加<code>z-index:0</code>属性，直接创建层叠上下文；</li>
+<li><code>z-index:auto</code>与<code>z-index:0</code>在层叠顺序上均属于第7级，但在层叠上下文的产生上差异很大；</li>
+<li><code>position:fixed</code>在<strong>非IE</strong>浏览器中会直接生成层叠上下文，无需显性设置<code>z-index</code>为数值；</li>
+</ul>
+<h5 id="2-translateZ逐鹿中原"><a href="#2-translateZ逐鹿中原" class="headerlink" title="(2) translateZ逐鹿中原"></a>(2) <code>translateZ</code>逐鹿中原</h5><ul>
+<li><code>transform</code> 可生成新的层叠上下文<br><img src="http://cdn.zhiyuchangxin.cn/transforem-after.gif?imageMogr2/thumbnail/300x/blur/1x0/quality/75|watermark/2/text/QOe7h-ivremVv-W_gw==/font/5a6L5L2T/fontsize/240/fill/I0UxRTFFMQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="translateY 生成了新的层叠上下文" title="translateY 生成了新的层叠上下文"><blockquote>
+<p>现象：下拉刷新的logo设置translateY偏移量后，结束刷新时logo没有被遮住；<br>原因：<code>transform</code> 可生成新的层叠上下文。</p>
+</blockquote>
+</li>
+<li>通过设置 translateZ 的值来改变元素的层叠水平，其值越大，层级越高</li>
+<li>translateZ 改变层级需要满足下列条件<strong>之一</strong>：<ul>
+<li>父元素中设置 transform-style: preserve-3d</li>
+<li>当前元素设置 perspective 透视<br><img src="http://cdn.zhiyuchangxin.cn/transform-before.gif?imageMogr2/thumbnail/300x/blur/1x0/quality/75|watermark/2/text/QOe7h-ivremVv-W_gw==/font/5a6L5L2T/fontsize/240/fill/I0UxRTFFMQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="translateZ 处理后" title="translateZ 处理后"></li>
+</ul>
+</li>
+</ul>
+<h5 id="3-z-index与translateZ双剑合璧？？？"><a href="#3-z-index与translateZ双剑合璧？？？" class="headerlink" title="(3) z-index与translateZ双剑合璧？？？"></a>(3) <code>z-index</code>与<code>translateZ</code>双剑合璧？？？</h5><p>当我们同时设置<code>transform</code>与<code>z-index</code>时，常会出现<code>z-index</code>失效的情况<br><img src="http://cdn.zhiyuchangxin.cn/transform-zindex0.png?imageMogr2/thumbnail/400x/blur/1x0/quality/75|watermark/2/text/QOe7h-ivremVv-W_gw==/font/5a6L5L2T/fontsize/240/fill/I0UxRTFFMQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="层叠冲突" title="transform与z-index冲突"></p>
+<p>我们该如何解决上述冲突呢？</p>
+<ul>
+<li>任意<code>非body</code>祖先元素设置<code>overflow:hidden</code>即可恢复和其他浏览器一样的渲染</li>
+</ul>
+<p><img src="http://cdn.zhiyuchangxin.cn/transform-zindex.gif?imageMogr2/thumbnail/600x/blur/1x0/quality/75|watermark/2/text/QOe7h-ivremVv-W_gw==/font/5a6L5L2T/fontsize/240/fill/I0UxRTFFMQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="解决层叠冲突" title="解决层叠冲突之非body祖先元素设置 overflow:hidden"></p>
+<ul>
+<li>以毒攻毒：同样可以使用 3D transform 变换</li>
+<li>使劲提高 translateZ 的值（对于透视的情况，临界值并不好掌握-_-）</li>
+</ul>
+<h3 id="七、代码中的规范"><a href="#七、代码中的规范" class="headerlink" title="七、代码中的规范"></a>七、代码中的规范</h3><ol>
+<li>非浮动元素：z-index “不犯2”准则<ul>
+<li>即对于非浮动元素 z-index 值的设置一般不超过 2</li>
+</ul>
+</li>
+<li>浮层元素：z-index “层级计数器”<ul>
+<li>对于浮层元素设置层级时，获取z-index最大值 / z-index默认值(习惯设置为9)</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>重新解释 DEMO1：<br>非IE浏览器中，父元素设置 position:fixed 生成了层叠上下文；<br>此层叠上下文的产生破坏了”同一层叠上下文“中比较层叠水平的基础，导致子元素所有的层级设置都受到父级层叠上下文的限制；<br>最终造成的错觉是子元素的所有层级设置都失效了~</p>
+</blockquote>
+<h3 id="八、参考文献"><a href="#八、参考文献" class="headerlink" title="八、参考文献"></a>八、参考文献</h3><ol>
+<li><a href="https://www.zhangxinxu.com/wordpress/2016/01/understand-css-stacking-context-order-z-index/comment-page-1/#comment-386780" target="_blank" rel="noopener">深入理解CSS中的层叠上下文和层叠顺序</a></li>
+<li><a href="https://www.cnblogs.com/reaf/p/5788781.html" target="_blank" rel="noopener">z-index和transform,你真的了解吗？</a></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        <div class="page-end-flag">
+  
+    <div class="info">&nbsp;-------------本文结束&nbsp;<i class="fa fa-paw"></i>&nbsp;感谢您的阅读-------------</div>
+  
+</div>
+
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/18/first/" rel="next" title="2017 年终总结">
+                <i class="fa fa-chevron-left"></i> 2017 年终总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div onclick="showGitment()" id="gitment_title" class="gitment_title">显示 Gitment 评论</div>
+      <div id="container" style="display:none"></div>
+      <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+      <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+      <script>
+      const myTheme = {
+        render(state, instance) {
+          const container = document.createElement('div');
+          container.lang = "en-US";
+          container.className = 'gitment-container gitment-root-container';
+          container.appendChild(instance.renderHeader(state, instance));
+          container.appendChild(instance.renderEditor(state, instance));
+          container.appendChild(instance.renderComments(state, instance));
+          container.appendChild(instance.renderFooter(state, instance));
+          return container;
+        }
+      }
+      function showGitment() {
+        $("#gitment_title").attr("style", "display:none");
+        // $("#comments").addClass("bg-white");
+        $("#container").attr("style", "").addClass("gitment_container");
+        var gitment = new Gitment({
+          id: window.location.pathname,
+          theme: myTheme,
+          owner: '20948105',
+          repo: 'https://github.com/zhiyuchangxin/zhiyuchangxin.net/issues',
+          oauth: {
+            client_id: '418e924c1d9148c327db',
+            client_secret: '389394a50f2b0597d47ead0340448bf4a1d0a7ee'
+          }
+        });
+        gitment.render('container');
+      }
+      </script>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://cdn.zhiyuchangxin.cn/qb_01.png"
+               alt="织语长心" />
+          <p class="site-author-name" itemprop="name">织语长心</p>
+           
+              <p class="site-description motion-element" itemprop="description">梦的小小暖阁，为你收藏整季的烟雨</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zhiyuchangxin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、层叠界的术语"><span class="nav-number">1.</span> <span class="nav-text">一、层叠界的术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、层叠准则（前提：同一层叠上下文中做比较）"><span class="nav-number">2.</span> <span class="nav-text">二、层叠准则（前提：同一层叠上下文中做比较）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、层叠上下文的特性"><span class="nav-number">3.</span> <span class="nav-text">三、层叠上下文的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、层叠上下文的创建"><span class="nav-number">4.</span> <span class="nav-text">四、层叠上下文的创建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正统派层叠上下文创建"><span class="nav-number">4.1.</span> <span class="nav-text">正统派层叠上下文创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩招派层叠上下文创建"><span class="nav-number">4.2.</span> <span class="nav-text">扩招派层叠上下文创建</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、层叠顺序（Stacking-Order）"><span class="nav-number">5.</span> <span class="nav-text">五、层叠顺序（Stacking Order）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思考两个问题"><span class="nav-number">5.1.</span> <span class="nav-text">思考两个问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#看图划重点啦："><span class="nav-number">5.2.</span> <span class="nav-text">看图划重点啦：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、改变层叠顺序"><span class="nav-number">6.</span> <span class="nav-text">六、改变层叠顺序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不产生层叠上下文的前提下："><span class="nav-number">6.1.</span> <span class="nav-text">不产生层叠上下文的前提下：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-调整DOM结构"><span class="nav-number">6.1.1.</span> <span class="nav-text">(1) 调整DOM结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-添加非z-index相关的属性"><span class="nav-number">6.1.2.</span> <span class="nav-text">(2) 添加非z-index相关的属性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#产生层叠上下文的前提下："><span class="nav-number">6.2.</span> <span class="nav-text">产生层叠上下文的前提下：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-z-index问鼎天下"><span class="nav-number">6.2.1.</span> <span class="nav-text">(1) z-index问鼎天下</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-translateZ逐鹿中原"><span class="nav-number">6.2.2.</span> <span class="nav-text">(2) translateZ逐鹿中原</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-z-index与translateZ双剑合璧？？？"><span class="nav-number">6.2.3.</span> <span class="nav-text">(3) z-index与translateZ双剑合璧？？？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七、代码中的规范"><span class="nav-number">7.</span> <span class="nav-text">七、代码中的规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八、参考文献"><span class="nav-number">8.</span> <span class="nav-text">八、参考文献</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">织语长心</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="snow-box" id="snow-box">
+    <canvas class="snow-canvas" width="1920" height="800" id="c1"></canvas>
+  </div>
+
+  <div class="self-btns drag-items">
+    <span id="btn-moon" class="btn-moon">🌛</span>
+    <span id="btn-sun" class="btn-sun">☀️</span>
+    <span id="btn-snow" class="btn-snow">❄️</span>
+    <span id="btn-stop" class="btn-stop">停</span>
+  </div>
+
+  <!-- 昼夜模式/下雪模式 切换 -->
+  <script type="text/javascript" src="/js/src/change.js"></script>
+  <!-- 页面下雪啦 -->
+  <script type="text/javascript" src="/js/src/snow.js"></script>
+  <!-- 页面-我的小心心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <!-- 手端昼夜按钮拖拽 -->
+  <script type="text/javascript" src="/js/src/drag.js"></script>
+</body>
+</html>
