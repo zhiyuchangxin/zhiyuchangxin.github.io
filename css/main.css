@@ -1894,7 +1894,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #089e22;
+  background: #139fb6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3298,9 +3298,15 @@ canvas {
   background: #444;
   color: #bbb;
 }
-.night-mode table>tbody>tr:nth-of-type(odd),
-.night-mode table>tbody>tr:hover {
+.night-mode table>thead>tr,
+.night-mode table>tbody>tr:nth-of-type(even) {
+  background: #444;
+}
+.night-mode table>tbody>tr:nth-of-type(odd) {
   background: #555;
+}
+.night-mode table>tbody>tr:hover {
+  background: #3d3d3d;
 }
 .night-mode .menu-item a:hover {
   color: #87daff;
@@ -3373,6 +3379,13 @@ canvas {
 }
 .day-mode .highlight {
   opacity: 0.9;
+}
+.day-mode table>thead>tr,
+.day-mode table>tbody>tr:nth-of-type(even) {
+  background: #fff;
+}
+.day-mode table>tbody>tr:hover {
+  background: #f1f1f1;
 }
 @media (max-width: 767px) {
   body {
