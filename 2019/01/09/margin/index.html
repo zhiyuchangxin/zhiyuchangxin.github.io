@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="One Piece">
 <meta property="og:description" content="Margin 真是个神奇的属性，使用过程中总能给我们带来各种惊喜。这不，今天又掉进了他的大坑！我给margin-top设置的负值总是不生效。越是着急用他的时候越是罢工，出现各种异常表现。拖延症晚期的我也终于忍无可忍，决心今天一定要彻底破除margin的黑魔法~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-15T03:34:13.960Z">
+<meta property="og:updated_time" content="2019-01-15T13:51:46.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="破除 Margin 的黑魔法">
 <meta name="twitter:description" content="Margin 真是个神奇的属性，使用过程中总能给我们带来各种惊喜。这不，今天又掉进了他的大坑！我给margin-top设置的负值总是不生效。越是着急用他的时候越是罢工，出现各种异常表现。拖延症晚期的我也终于忍无可忍，决心今天一定要彻底破除margin的黑魔法~">
@@ -407,11 +407,11 @@
 <li>margin 值设置 % 时都是相对于元素的<strong>宽度</strong>计算的</li>
 <li>margin 的默认值是 0，所以后面在使用 auto 时一定要手动设置</li>
 </ol>
-<h3 id="二、margin-异常场景汇总"><a href="#二、margin-异常场景汇总" class="headerlink" title="二、margin 异常场景汇总"></a>二、margin 异常场景汇总</h3><p>我最喜欢 margin-left 属性啦，它是真的乖，在任何场景下均无异常表现~<br>但是其他方向表现如何呢，下面我们通过<a href="https://codepen.io/zhiyuchangxin/pen/OrwoPx" target="_blank"><code>DEMO1</code></a>验证一下，最终我对 margin 的各种情况进行验证并整理出表 2（可能不全，欢迎补充~）：</p>
+<h3 id="二、margin-异常场景汇总"><a href="#二、margin-异常场景汇总" class="headerlink" title="二、margin 异常场景汇总"></a>二、margin 异常场景汇总</h3><p>我最喜欢 margin-left 属性啦，它是真的乖，在任何场景下均无异常表现~<br>但是其他方向表现如何呢，下面我们通过<a href="https://codepen.io/zhiyuchangxin/pen/OrwoPx" target="_blank"><code>DEMO1</code></a>进行实验，最终我对 margin 的各种情况验证并整理出表 2（可能不全，欢迎补充~）</p>
 <blockquote>
-<p>表 2 结论的前提条件有下面几点： 1.<code>margin-top</code>主要针对盒子中的第一个元素实验; 2.<code>margin-right</code>、<code>margin-bottom</code>主要针对盒子中最后一个元素实验； 3.「子」——子元素、「父」——父元素盒子；结论主要针对的是子元素的各种表现。</p>
+<p>表 2 结论的前提条件有下面几点：<br>1.<code>margin-top</code>主要针对盒子中的第一个元素实验;<br>2.<code>margin-right</code>、<code>margin-bottom</code>主要针对盒子中最后一个元素实验；<br>3.「子」——子元素、「父」——父元素盒子；结论主要针对的是子元素的各种表现。</p>
 </blockquote>
-<div>表2：margin 异常场景汇总</div>
+<div>表2：margin 在不同场景下的表现</div>
 
 <table><!--block--><thead><tr><th>「子」Display</th><th>「子」Margin</th><th>「子」取值符号</th><th>「父」定宽高</th><th>「父」inline-block<br>「子」表现</th><th>「父」block<br>「子」表现</th></tr></thead><tbody><tr><td rowspan="16">block</td><td rowspan="4">margin-top</td><td rowspan="2">+</td><td>Y</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td>N</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td rowspan="2">-</td><td>Y</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td>N</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td rowspan="4">margin-bottom</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td rowspan="4">margin-left</td><td rowspan="2">+</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="2">-</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="4">margin-right</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr><!--inline--><tr><td rowspan="16">inline</td><td rowspan="4">margin-top</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="4">margin-bottom</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="4">margin-left</td><td rowspan="2">+</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="2">-</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="4">margin-right</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr><!--inline-block--><tr><td rowspan="16">inline-block</td><td rowspan="4">margin-top</td><td rowspan="2">+</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #f00;">失效</td><td style="color: #f00;">失效</td></tr><tr><td>N</td><td style="color: #f00;">失效</td><td style="color: #f00;">失效</td></tr><tr><td rowspan="4">margin-bottom</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="4">margin-left</td><td rowspan="2">+</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="2">-</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="4">margin-right</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr></tbody></table>
 
@@ -427,15 +427,14 @@
 <li>水平居右：使用“规则二”实现水平居右，这点却经常会被我们忽视掉，快来看下<a href="https://codepen.io/zhiyuchangxin/pen/EGddvy" target="_blank"><code>DEMO2</code></a>的实现</li>
 </ul>
 <p>没错，我们通过设置<code>margin-left:auto</code> 实现了水平居右，这样一来 <code>float:right</code> 也可以休息片刻啦~</p>
-<h4 id="margin-auto-的垂直布局"><a href="#margin-auto-的垂直布局" class="headerlink" title="margin: auto 的垂直布局"></a>margin: auto 的垂直布局</h4><p>垂直布局？？？<br>在我的印象中貌似实现不了垂直布局，<a href="https://codepen.io/zhiyuchangxin/pen/EGdMjv" target="_blank"><code>DEMO3</code></a>也验证了这一点：DEMO3 只实现了水平居中，未实现垂直居中</p>
-<p>为什么没实现垂直布局呢？想弄明白这一点，就要对“空闲尺寸”的“自动填充”做进一步的理解了。</p>
+<h4 id="margin-auto-的垂直布局"><a href="#margin-auto-的垂直布局" class="headerlink" title="margin: auto 的垂直布局"></a>margin: auto 的垂直布局</h4><p>垂直布局？？？<br>在我的印象中貌似实现不了垂直布局，<a href="https://codepen.io/zhiyuchangxin/pen/EGdMjv" target="_blank"><code>DEMO3</code></a>也验证了这一点：DEMO3 只实现了水平居中，未实现垂直居中。<br>为什么没实现垂直布局呢？想弄明白这一点，就要对“空闲尺寸”的“自动填充”做进一步的理解了。</p>
 <p><code>margin: auto</code>触发的前提需要特别注意：</p>
 <ul>
 <li>水平触发：当<code>width</code>设为<code>auto</code>时，宽度能自动填充满容器</li>
 <li>垂直触发：当<code>height</code>设为<code>auto</code>时，高度能自动填充满容器</li>
 </ul>
 <blockquote>
-<p>如 DEMO3 中当 .in 设置<code>width:auto</code>后可以自动填充为 .out 的宽度 400px，满足对应方向的自动填充规则，<br>但是 .in 设置<code>height:auto</code>后却不能自动填充为 .out 的高度 300px，未能满足对应方向的自动填充规则，<br>所以只实现了水平方向的居中，不能实现垂直方向的居中。</p>
+<p>DEMO3 中：当 .in 设置<code>width:auto</code>后可以自动填充为 .out 的宽度 400px，满足对应方向的自动填充规则；<br>但 .in 设置<code>height:auto</code>后却不能自动填充为 .out 的高度 300px，未能满足对应方向的自动填充规则。<br>所以只实现了水平方向的居中，不能实现垂直方向的居中。</p>
 </blockquote>
 <p>那如果我们一定要实现垂直方向居中（IE8+）又该如何做呢？</p>
 <ol>
@@ -446,7 +445,7 @@
 <p>因为当设置了绝对定位+top:0+bottom:0 后，即使将高度设置为 auto，依然能自动填充满屏高，所以满足 margin:auto 在垂直方向的触发条件^_^</p>
 </blockquote>
 <p>下面<a href="https://codepen.io/zhiyuchangxin/pen/roogaQ" target="_blank"><code>DEMO4</code></a>展示了水平垂直居中的终极实现，这才应该是居中的正确打开方式。</p>
-<h3 id="四、margin-合并现象"><a href="#四、margin-合并现象" class="headerlink" title="四、margin 合并现象"></a>四、margin 合并现象</h3><p>根据表 2 的实验结果，我们抽离出 <code>margin</code> 合并的情况再做详细梳理。  </p>
+<h3 id="四、margin-合并现象"><a href="#四、margin-合并现象" class="headerlink" title="四、margin 合并现象"></a>四、margin 合并现象</h3><p>根据表 2 的实验结果，我们抽离出 <code>margin</code> 合并的情况再做详细梳理。</p>
 <blockquote>
 <p>注：不考虑 <code>writing-mode</code> 的影响，我们这里所提的 <code>margin</code> 主要指<strong>垂直方向上的</strong>合并~</p>
 </blockquote>
@@ -477,8 +476,7 @@
 <p>父子合并解决方案的实质：通过一定手段强行分隔开异常父子，避免其直接接触，如<code>padding</code>、<code>border</code>、其他内联元素等</p>
 </blockquote>
 <h4 id="相邻兄弟元素合并"><a href="#相邻兄弟元素合并" class="headerlink" title="相邻兄弟元素合并"></a>相邻兄弟元素合并</h4><p>此种现象对我们的布局影响不大，甚至有时这种合并会更方便我们的布局；<br>一定要处理这种合并的话，迫使某一元素触发 BFC 即可解决~</p>
-<p>触发 BFC 最常用的方案同上添加：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br></pre></td></tr></table></figure>
+<p>触发 BFC 最常用的方案同上添加：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br></pre></td></tr></table></figure></p>
 <h4 id="空块级元素合并"><a href="#空块级元素合并" class="headerlink" title="空块级元素合并"></a>空块级元素合并</h4><p>这种情形我们遇到的就更少啦，这种机制的存在本意就是为了防止有一些多余的空标签未删除对布局造成影响。<br>实际开发中多余空标签的存在是不规范的，直接删除就好!<br>要强行保留空标签并解决合并问题的话，方法也是类似：</p>
 <ul>
 <li>设置垂直方向<code>padding</code>的值（非 0）</li>
@@ -516,10 +514,10 @@
 <li>两栏等高布局<a href="https://codepen.io/zhiyuchangxin/pen/ZVVgVo" target="_blank"><code>DEMO7</code></a></li>
 </ul>
 <blockquote>
-<p>此处“两栏等高布局”实现的缺点：<br>1.没有底部边框，需手动添加（无需边框的场景比较方便）；<br>2.父元素<code>overflow:hidden</code>对子元素有一定的局限性（子元素定位到容器之外的场景不适用）；<br>3.影响锚点定位</p>
+<p>此处“两栏等高布局”实现的缺点：<br>1.没有底部边框，需手动添加（无需边框的场景比较方便）<br>2.父元素<code>overflow:hidden</code>对子元素有一定的局限性（子元素定位到容器之外的场景不适用）<br>3.影响锚点定位</p>
 </blockquote>
 <p>正是这些不足的存在督促我们继续探索 =&gt; 可进一步总结其他实现“两栏等高布局”的方案（后期补充~）</p>
-<p>今天的总结就到这里，自己梳理清楚的基础上希望也能给大家带来些帮助。<br>发现问题欢迎随时指出哟^_^</p>
+<p>今天的总结就到这里，自己梳理的基础上希望也能给大家带来些帮助。<br>发现问题欢迎随时指出哟^_^</p>
 <h3 id="七、参考资料"><a href="#七、参考资料" class="headerlink" title="七、参考资料"></a>七、参考资料</h3><ul>
 <li>CSS 世界 —— 张鑫旭</li>
 </ul>
