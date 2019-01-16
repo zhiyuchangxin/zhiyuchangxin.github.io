@@ -43,24 +43,6 @@ function init(temp, name) {
 }
 
 /**
- * 节流处理
- */
-function throttle(func, wait) {
-  var canRun = true // 设置并打开开关
-  // var _this = this
-  return function() {
-    // 返回闭包函数 canRun 保留作用域
-    if (!canRun) return
-    canRun = false // 关闭开关
-    setTimeout(() => {
-      // wait 时间之后执行 func 并恢复开关
-      func.apply(this, arguments)
-      canRun = true
-    }, wait)
-  }
-}
-
-/**
  * 监听手指触摸 drag-items 事件调动 down 方法
  */
 oDrag.addEventListener('touchstart', down)
