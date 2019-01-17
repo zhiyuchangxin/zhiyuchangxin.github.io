@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="One Piece">
 <meta property="og:description" content="Margin 真是个神奇的属性，使用过程中总能给我们带来各种惊喜。这不，今天又掉进了他的大坑！我给margin-top设置的负值总是不生效。越是着急用他的时候越是罢工，出现各种异常表现。拖延症晚期的我也终于忍无可忍，决心今天一定要彻底破除margin的黑魔法~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-17T12:22:28.434Z">
+<meta property="og:updated_time" content="2019-01-17T12:45:48.913Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="破除 Margin 的黑魔法">
 <meta name="twitter:description" content="Margin 真是个神奇的属性，使用过程中总能给我们带来各种惊喜。这不，今天又掉进了他的大坑！我给margin-top设置的负值总是不生效。越是着急用他的时候越是罢工，出现各种异常表现。拖延症晚期的我也终于忍无可忍，决心今天一定要彻底破除margin的黑魔法~">
@@ -385,7 +385,7 @@
         <p>Margin 真是个神奇的属性，使用过程中总能给我们带来各种惊喜。<br>这不，今天又掉进了他的大坑！我给<code>margin-top</code>设置的负值总是不生效。<br>越是着急用他的时候越是罢工，出现各种异常表现。拖延症晚期的我也终于忍无可忍，决心今天一定要彻底破除<code>margin</code>的黑魔法~</p>
 <a id="more"></a>
 <p>先从基础的开始吧，逐步的深入，希望通过这次机会我们能彻底驯服这只桀骜不驯的小兽。</p>
-<h2 id="Margin-基础"><a href="#Margin-基础" class="headerlink" title="Margin 基础"></a>Margin 基础</h2><p>margin 是一个设置盒子模型外边距的属性，其值的大小不会像 padding 那样对元素本身的尺寸造成影响。<br>margin 可以设置的类型有以下四种（如表 1）：</p>
+<h3 id="Margin-基础"><a href="#Margin-基础" class="headerlink" title="Margin 基础"></a>Margin 基础</h3><p>margin 是一个设置盒子模型外边距的属性，其值的大小不会像 padding 那样对元素本身的尺寸造成影响。<br>margin 可以设置的类型有以下四种（如表 1）：</p>
 <div style="margin: 15px 0 -15px;">表1：margin 取值类型</div>
 
 <table>
@@ -419,7 +419,7 @@
 <li>margin 值设置 % 时都是相对于元素的<strong>宽度</strong>计算的</li>
 <li>margin 的默认值是 0，所以后面在使用 auto 时一定要手动设置</li>
 </ol>
-<h2 id="Margin-异常场景汇总"><a href="#Margin-异常场景汇总" class="headerlink" title="Margin 异常场景汇总"></a>Margin 异常场景汇总</h2><p>我最喜欢<code>margin-left</code>属性啦，它是真的乖，在任何场景下均无异常表现~<br>但是其他方向表现如何呢，下面我们通过<a href="https://codepen.io/zhiyuchangxin/pen/OrwoPx" target="_blank"><code>DEMO1</code></a>进行实验，最终我对 margin 的各种情况验证并整理出表 2（可能不全，欢迎补充~）</p>
+<h3 id="Margin-异常场景汇总"><a href="#Margin-异常场景汇总" class="headerlink" title="Margin 异常场景汇总"></a>Margin 异常场景汇总</h3><p>我最喜欢<code>margin-left</code>属性啦，它是真的乖，在任何场景下均无异常表现~<br>但是其他方向表现如何呢，下面我们通过<a href="https://codepen.io/zhiyuchangxin/pen/OrwoPx" target="_blank"><code>DEMO1</code></a>进行实验，最终我对 margin 的各种情况验证并整理出表 2（可能不全，欢迎补充~）</p>
 <blockquote>
 <p>表 2 结论的前提条件有下面几点：<br>1.<code>margin-top</code>主要针对盒子中的第一个元素实验;<br>2.<code>margin-right</code>、<code>margin-bottom</code>主要针对盒子中最后一个元素实验；<br>3.「子」——子元素、「父」——父元素盒子；结论主要针对的是子元素的各种表现。</p>
 </blockquote>
@@ -428,7 +428,7 @@
 <table><!--block--><thead><tr><th>「子」Display</th><th>「子」Margin</th><th>「子」取值符号</th><th>「父」定宽高</th><th>「父」inline-block<br>「子」表现</th><th>「父」block<br>「子」表现</th></tr></thead><tbody><tr><td rowspan="16">block</td><td rowspan="4">margin-top</td><td rowspan="2">+</td><td>Y</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td>N</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td rowspan="2">-</td><td>Y</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td>N</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td rowspan="4">margin-bottom</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #71d6f5;">合并</td></tr><tr><td rowspan="4">margin-left</td><td rowspan="2">+</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="2">-</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="4">margin-right</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr><!--inline--><tr><td rowspan="16">inline</td><td rowspan="4">margin-top</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="4">margin-bottom</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="4">margin-left</td><td rowspan="2">+</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="2">-</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="4">margin-right</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr><!--inline-block--><tr><td rowspan="16">inline-block</td><td rowspan="4">margin-top</td><td rowspan="2">+</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #f00;">失效</td><td style="color: #f00;">失效</td></tr><tr><td>N</td><td style="color: #f00;">失效</td><td style="color: #f00;">失效</td></tr><tr><td rowspan="4">margin-bottom</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="4">margin-left</td><td rowspan="2">+</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="2">-</td><td>Y</td><td>正常</td><td>正常</td></tr><tr><td>N</td><td>正常</td><td>正常</td></tr><tr><td rowspan="4">margin-right</td><td rowspan="2">+</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr><tr><td rowspan="2">-</td><td>Y</td><td style="color: #fabf51;">失效</td><td style="color: #fabf51;">失效</td></tr><tr><td>N</td><td>正常</td><td style="color: #fabf51;">失效</td></tr></tbody></table>
 
 <p>表 2 中的异常表现，后面会给出相应的解决方案</p>
-<h2 id="Margin-auto-剖析"><a href="#Margin-auto-剖析" class="headerlink" title="Margin: auto 剖析"></a>Margin: auto 剖析</h2><p><code>margin: auto</code> 是为了填充空闲尺寸而设计的。<br>听着有些抽象，具体怎么填充的呢？我们继续探索~</p>
+<h3 id="Margin-auto-剖析"><a href="#Margin-auto-剖析" class="headerlink" title="Margin: auto 剖析"></a>Margin: auto 剖析</h3><p><code>margin: auto</code> 是为了填充空闲尺寸而设计的。<br>听着有些抽象，具体怎么填充的呢？我们继续探索~</p>
 <h4 id="margin-auto-的填充规则"><a href="#margin-auto-的填充规则" class="headerlink" title="margin: auto 的填充规则"></a>margin: auto 的填充规则</h4><ul>
 <li>规则一：两侧均为 auto 时，平分剩余空间</li>
 <li>规则二：一侧定值，一侧 auto 时，auto 为剩余空间大小</li>
@@ -456,8 +456,8 @@
 <blockquote>
 <p>因为当设置了绝对定位+top:0+bottom:0 后，即使将高度设置为 auto，依然能自动填充满屏高，所以满足 margin:auto 在垂直方向的触发条件^_^</p>
 </blockquote>
-<p>下面<a href="https://codepen.io/zhiyuchangxin/pen/roogaQ" target="_blank"><code>DEMO4</code></a>展示了水平垂直居中的终极实现，这才应该是居中的正确打开方式。</p>
-<h2 id="Margin-合并现象"><a href="#Margin-合并现象" class="headerlink" title="Margin 合并现象"></a>Margin 合并现象</h2><p>根据表 2 的实验结果，我们抽离出 <code>margin</code> 合并的情况再做详细梳理。</p>
+<p>下面<a href="https://codepen.io/zhiyuchangxin/pen/roogaQ" target="_blank"><code>DEMO4</code></a>展示了水平垂直居中的终极实现，这才应该是居中的正确打开方式。  </p>
+<h3 id="Margin-合并现象"><a href="#Margin-合并现象" class="headerlink" title="Margin 合并现象"></a>Margin 合并现象</h3><p>根据表 2 的实验结果，我们抽离出 <code>margin</code> 合并的情况再做详细梳理。</p>
 <blockquote>
 <p>注：不考虑 <code>writing-mode</code> 的影响，我们这里所提的 <code>margin</code> 主要指<strong>垂直方向上的</strong>合并~</p>
 </blockquote>
@@ -495,7 +495,7 @@
 <li>设置垂直方向<code>border</code>的值</li>
 <li>空标签中添加内容（直接添加 space 无效，用<code>&amp;nbsp;</code>代替）</li>
 </ul>
-<h2 id="Margin-无效场景解析"><a href="#Margin-无效场景解析" class="headerlink" title="Margin 无效场景解析"></a>Margin 无效场景解析</h2><h4 id="margin-无效场景总结"><a href="#margin-无效场景总结" class="headerlink" title="margin 无效场景总结"></a>margin 无效场景总结</h4><p>根据表 2 的实验结果，我们抽离出 <code>margin</code> 无效的情况再做详细梳理。</p>
+<h3 id="Margin-无效场景解析"><a href="#Margin-无效场景解析" class="headerlink" title="Margin 无效场景解析"></a>Margin 无效场景解析</h3><h4 id="margin-无效场景总结"><a href="#margin-无效场景总结" class="headerlink" title="margin 无效场景总结"></a>margin 无效场景总结</h4><p>根据表 2 的实验结果，我们抽离出 <code>margin</code> 无效的情况再做详细梳理。</p>
 <ol>
 <li>行间<code>inline</code>元素的垂直 <code>margin</code> 均无效</li>
 <li>行块<code>inline-block</code>元素的 <code>margin-top</code> 负值无效</li>
@@ -516,7 +516,7 @@
 <li>容器设置为行块<code>inline-block</code>元素不定宽</li>
 <li>解决<code>margin</code>合并问题</li>
 </ol>
-<h2 id="Margin-常用场景"><a href="#Margin-常用场景" class="headerlink" title="Margin 常用场景"></a>Margin 常用场景</h2><ul>
+<h3 id="Margin-常用场景"><a href="#Margin-常用场景" class="headerlink" title="Margin 常用场景"></a>Margin 常用场景</h3><ul>
 <li>垂直水平居中布局<a href="https://codepen.io/zhiyuchangxin/pen/roogaQ" target="_blank"><code>DEMO4</code></a></li>
 <li>两栏自适应布局<a href="https://codepen.io/zhiyuchangxin/pen/ebbaMa" target="_blank"><code>DEMO5</code></a><ul>
 <li>注意<code>margin-right</code>生效的前提是：盒子为行块<code>inline-block</code>元素不定宽</li>
@@ -530,7 +530,7 @@
 </blockquote>
 <p>正是这些不足的存在督促我们继续探索 =&gt; 可进一步总结其他实现“两栏等高布局”的方案（后期补充~）</p>
 <p>今天的总结就到这里，自己梳理的基础上希望也能给大家带来些帮助。<br>发现问题欢迎随时指出哟^_^</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
 <li>CSS 世界 —— 张鑫旭</li>
 </ul>
 
@@ -760,7 +760,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Margin-基础"><span class="nav-number">1.</span> <span class="nav-text">Margin 基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Margin-异常场景汇总"><span class="nav-number">2.</span> <span class="nav-text">Margin 异常场景汇总</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Margin-auto-剖析"><span class="nav-number">3.</span> <span class="nav-text">Margin: auto 剖析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-auto-的填充规则"><span class="nav-number">3.0.1.</span> <span class="nav-text">margin: auto 的填充规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-auto-的水平布局"><span class="nav-number">3.0.2.</span> <span class="nav-text">margin: auto 的水平布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-auto-的垂直布局"><span class="nav-number">3.0.3.</span> <span class="nav-text">margin: auto 的垂直布局</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Margin-合并现象"><span class="nav-number">4.</span> <span class="nav-text">Margin 合并现象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#父子合并"><span class="nav-number">4.0.1.</span> <span class="nav-text">父子合并</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#异常表现："><span class="nav-number">4.0.1.1.</span> <span class="nav-text">异常表现：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#margin-top合并的解决方案："><span class="nav-number">4.0.1.2.</span> <span class="nav-text">margin-top合并的解决方案：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#margin-bottom合并的解决方案："><span class="nav-number">4.0.1.3.</span> <span class="nav-text">margin-bottom合并的解决方案：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相邻兄弟元素合并"><span class="nav-number">4.0.2.</span> <span class="nav-text">相邻兄弟元素合并</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空块级元素合并"><span class="nav-number">4.0.3.</span> <span class="nav-text">空块级元素合并</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Margin-无效场景解析"><span class="nav-number">5.</span> <span class="nav-text">Margin 无效场景解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-无效场景总结"><span class="nav-number">5.0.1.</span> <span class="nav-text">margin 无效场景总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-无效场景解决方案"><span class="nav-number">5.0.2.</span> <span class="nav-text">margin 无效场景解决方案</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Margin-常用场景"><span class="nav-number">6.</span> <span class="nav-text">Margin 常用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Margin-基础"><span class="nav-number">1.</span> <span class="nav-text">Margin 基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Margin-异常场景汇总"><span class="nav-number">2.</span> <span class="nav-text">Margin 异常场景汇总</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Margin-auto-剖析"><span class="nav-number">3.</span> <span class="nav-text">Margin: auto 剖析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-auto-的填充规则"><span class="nav-number">3.1.</span> <span class="nav-text">margin: auto 的填充规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-auto-的水平布局"><span class="nav-number">3.2.</span> <span class="nav-text">margin: auto 的水平布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-auto-的垂直布局"><span class="nav-number">3.3.</span> <span class="nav-text">margin: auto 的垂直布局</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Margin-合并现象"><span class="nav-number">4.</span> <span class="nav-text">Margin 合并现象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#父子合并"><span class="nav-number">4.1.</span> <span class="nav-text">父子合并</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#异常表现："><span class="nav-number">4.1.1.</span> <span class="nav-text">异常表现：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#margin-top合并的解决方案："><span class="nav-number">4.1.2.</span> <span class="nav-text">margin-top合并的解决方案：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#margin-bottom合并的解决方案："><span class="nav-number">4.1.3.</span> <span class="nav-text">margin-bottom合并的解决方案：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相邻兄弟元素合并"><span class="nav-number">4.2.</span> <span class="nav-text">相邻兄弟元素合并</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空块级元素合并"><span class="nav-number">4.3.</span> <span class="nav-text">空块级元素合并</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Margin-无效场景解析"><span class="nav-number">5.</span> <span class="nav-text">Margin 无效场景解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-无效场景总结"><span class="nav-number">5.1.</span> <span class="nav-text">margin 无效场景总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-无效场景解决方案"><span class="nav-number">5.2.</span> <span class="nav-text">margin 无效场景解决方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Margin-常用场景"><span class="nav-number">6.</span> <span class="nav-text">Margin 常用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
