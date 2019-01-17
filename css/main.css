@@ -1893,7 +1893,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4e171b;
+  background: #77d7f0;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3052,10 +3052,13 @@ p {
 .post-spread .-mob-share-ui-button {
   display: inline-block;
   margin: 0 auto;
-  padding: 0.4em 0.6em;
+  padding: 0.3em;
   width: 8em;
-  border: 1px solid;
+  border: 1px solid #f9a135;
   border-radius: 5px;
+  background: transparent;
+  color: #f9a135;
+  font-weight: 400;
 }
 @media (max-width: 767px) {
   .page-home .post-body p {
@@ -3243,13 +3246,9 @@ canvas {
 .night-mode #SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w .post-wrap-main .area-textarea-e .textarea-fw {
   color: #dbdbdb;
 }
-.night-mode .-mob-share-ui-button {
-  background: #666;
-  color: #fff;
-  border-color: #bbb;
-}
 .night-mode .-mob-share-ui-button:hover {
-  background: #555;
+  background: rgba(102,102,102,0.3);
+  font-weight: 500;
 }
 .day-mode::before {
   content: '';
@@ -3282,13 +3281,9 @@ canvas {
 .day-mode table>tbody>tr:hover {
   background: #f1f1f1;
 }
-.day-mode .-mob-share-ui-button {
-  background: rgba(255,118,0,0.8);
-  color: #fff;
-  border-color: #ff7600;
-}
 .day-mode .-mob-share-ui-button:hover {
-  background: #ff7600;
+  background: rgba(230,230,230,0.1);
+  font-weight: 500;
 }
 @media (max-width: 767px) {
   body {
