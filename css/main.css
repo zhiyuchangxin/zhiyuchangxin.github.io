@@ -1893,7 +1893,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8aff2b;
+  background: #b91f25;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2423,13 +2423,6 @@ pre .javascript .function {
 .site-pv .busuanzi-value,
 .page-pv .busuanzi-value {
   margin: 0 5px;
-}
-.site-uv {
-  margin-right: 10px;
-}
-.site-uv::after {
-  content: "|";
-  padding-left: 10px;
 }
 .use-motion .post {
   opacity: 0;
@@ -3140,7 +3133,7 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("http://cdn.zhiyuchangxin.cn/hzw-now1.png") no-repeat;
+  background: url("//cdn.zhiyuchangxin.cn/hzw-now1.png") no-repeat;
   background-size: cover;
   opacity: 0.5;
   z-index: -1;
@@ -3242,7 +3235,7 @@ canvas {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("http://cdn.zhiyuchangxin.cn/hzw-now1.png") no-repeat;
+  background: url("//cdn.zhiyuchangxin.cn/hzw-now1.png") no-repeat;
   background-size: cover;
   opacity: 0.6;
   z-index: -1;

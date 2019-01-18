@@ -100,11 +100,11 @@
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="破除 Margin 的黑魔法">
-<meta property="og:url" content="http://blog.zhiyuchangxin.cn/articles/margin/index.html">
+<meta property="og:url" content="//blog.zhiyuchangxin.cn/articles/margin/index.html">
 <meta property="og:site_name" content="One Piece">
 <meta property="og:description" content="Margin 真是个神奇的属性，使用过程中总能给我们带来各种惊喜。这不，今天又掉进了他的大坑！我给margin-top设置的负值总是不生效。越是着急用他的时候越是罢工，出现各种异常表现。拖延症晚期的我也终于忍无可忍，决心今天一定要彻底破除margin的黑魔法~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-17T12:45:48.913Z">
+<meta property="og:updated_time" content="2019-01-18T09:09:06.503Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="破除 Margin 的黑魔法">
 <meta name="twitter:description" content="Margin 真是个神奇的属性，使用过程中总能给我们带来各种惊喜。这不，今天又掉进了他的大坑！我给margin-top设置的负值总是不生效。越是着急用他的时候越是罢工，出现各种异常表现。拖延症晚期的我也终于忍无可忍，决心今天一定要彻底破除margin的黑魔法~">
@@ -136,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.zhiyuchangxin.cn/articles/margin/"/>
+  <link rel="canonical" href="//blog.zhiyuchangxin.cn/articles/margin/"/>
 
 
 
@@ -160,7 +160,7 @@
 
 </head>
 
-<body class="night-mode" itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body class="night-mode" itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -170,7 +170,7 @@
   <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -294,20 +294,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.zhiyuchangxin.cn/articles/margin/index.html">
+    <link itemprop="mainEntityOfPage" href="//blog.zhiyuchangxin.cn/articles/margin/index.html">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="//schema.org/Person">
       <meta itemprop="name" content="织语长心">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://cdn.zhiyuchangxin.cn/qb_01.png">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="//schema.org/Organization">
       <meta itemprop="name" content="One Piece">
     </span>
 
@@ -419,7 +419,7 @@
 <li>margin 值设置 % 时都是相对于元素的<strong>宽度</strong>计算的</li>
 <li>margin 的默认值是 0，所以后面在使用 auto 时一定要手动设置</li>
 </ol>
-<h3 id="Margin-异常场景汇总"><a href="#Margin-异常场景汇总" class="headerlink" title="Margin 异常场景汇总"></a>Margin 异常场景汇总</h3><p>我最喜欢<code>margin-left</code>属性啦，它是真的乖，在任何场景下均无异常表现~<br>但是其他方向表现如何呢，下面我们通过<a href="https://codepen.io/zhiyuchangxin/pen/OrwoPx" target="_blank"><code>DEMO1</code></a>进行实验，最终我对 margin 的各种情况验证并整理出表 2（可能不全，欢迎补充~）</p>
+<h3 id="Margin-异常场景汇总"><a href="#Margin-异常场景汇总" class="headerlink" title="Margin 异常场景汇总"></a>Margin 异常场景汇总</h3><p>我最喜欢<code>margin-left</code>属性啦，它是真的乖，在任何场景下均无异常表现~<br>但是其他方向表现如何呢，下面我们通过<a href="//codepen.io/zhiyuchangxin/pen/OrwoPx" target="_blank"><code>DEMO1</code></a>进行实验，最终我对 margin 的各种情况验证并整理出表 2（可能不全，欢迎补充~）</p>
 <blockquote>
 <p>表 2 结论的前提条件有下面几点：<br>1.<code>margin-top</code>主要针对盒子中的第一个元素实验;<br>2.<code>margin-right</code>、<code>margin-bottom</code>主要针对盒子中最后一个元素实验；<br>3.「子」——子元素、「父」——父元素盒子；结论主要针对的是子元素的各种表现。</p>
 </blockquote>
@@ -436,10 +436,10 @@
 <h4 id="margin-auto-的水平布局"><a href="#margin-auto-的水平布局" class="headerlink" title="margin: auto 的水平布局"></a>margin: auto 的水平布局</h4><p>正因为<code>margin: auto</code> 两条填充规则的存在，使得<strong>块级元素</strong>实现了类似于<strong>行间元素</strong><code>text-aligin</code>水平布局的特性</p>
 <ul>
 <li>水平居中：使用“规则一”实现水平居中，这点我们再熟悉不过了，不再赘述。</li>
-<li>水平居右：使用“规则二”实现水平居右，这点却经常会被我们忽视掉，快来看下<a href="https://codepen.io/zhiyuchangxin/pen/EGddvy" target="_blank"><code>DEMO2</code></a>的实现</li>
+<li>水平居右：使用“规则二”实现水平居右，这点却经常会被我们忽视掉，快来看下<a href="//codepen.io/zhiyuchangxin/pen/EGddvy" target="_blank"><code>DEMO2</code></a>的实现</li>
 </ul>
 <p>没错，我们通过设置<code>margin-left:auto</code> 实现了水平居右，这样一来 <code>float:right</code> 也可以休息片刻啦~</p>
-<h4 id="margin-auto-的垂直布局"><a href="#margin-auto-的垂直布局" class="headerlink" title="margin: auto 的垂直布局"></a>margin: auto 的垂直布局</h4><p>垂直布局？？？<br>在我的印象中貌似实现不了垂直布局，<a href="https://codepen.io/zhiyuchangxin/pen/EGdMjv" target="_blank"><code>DEMO3</code></a>也验证了这一点：DEMO3 只实现了水平居中，未实现垂直居中。<br>为什么没实现垂直布局呢？想弄明白这一点，就要对“空闲尺寸”的“自动填充”做进一步的理解了。</p>
+<h4 id="margin-auto-的垂直布局"><a href="#margin-auto-的垂直布局" class="headerlink" title="margin: auto 的垂直布局"></a>margin: auto 的垂直布局</h4><p>垂直布局？？？<br>在我的印象中貌似实现不了垂直布局，<a href="//codepen.io/zhiyuchangxin/pen/EGdMjv" target="_blank"><code>DEMO3</code></a>也验证了这一点：DEMO3 只实现了水平居中，未实现垂直居中。<br>为什么没实现垂直布局呢？想弄明白这一点，就要对“空闲尺寸”的“自动填充”做进一步的理解了。</p>
 <p><code>margin: auto</code>触发的前提需要特别注意：</p>
 <ul>
 <li>水平触发：当<code>width</code>设为<code>auto</code>时，宽度能自动填充满容器</li>
@@ -456,7 +456,7 @@
 <blockquote>
 <p>因为当设置了绝对定位+top:0+bottom:0 后，即使将高度设置为 auto，依然能自动填充满屏高，所以满足 margin:auto 在垂直方向的触发条件^_^</p>
 </blockquote>
-<p>下面<a href="https://codepen.io/zhiyuchangxin/pen/roogaQ" target="_blank"><code>DEMO4</code></a>展示了水平垂直居中的终极实现，这才应该是居中的正确打开方式。  </p>
+<p>下面<a href="//codepen.io/zhiyuchangxin/pen/roogaQ" target="_blank"><code>DEMO4</code></a>展示了水平垂直居中的终极实现，这才应该是居中的正确打开方式。  </p>
 <h3 id="Margin-合并现象"><a href="#Margin-合并现象" class="headerlink" title="Margin 合并现象"></a>Margin 合并现象</h3><p>根据表 2 的实验结果，我们抽离出 <code>margin</code> 合并的情况再做详细梳理。</p>
 <blockquote>
 <p>注：不考虑 <code>writing-mode</code> 的影响，我们这里所提的 <code>margin</code> 主要指<strong>垂直方向上的</strong>合并~</p>
@@ -517,13 +517,13 @@
 <li>解决<code>margin</code>合并问题</li>
 </ol>
 <h3 id="Margin-常用场景"><a href="#Margin-常用场景" class="headerlink" title="Margin 常用场景"></a>Margin 常用场景</h3><ul>
-<li>垂直水平居中布局<a href="https://codepen.io/zhiyuchangxin/pen/roogaQ" target="_blank"><code>DEMO4</code></a></li>
-<li>两栏自适应布局<a href="https://codepen.io/zhiyuchangxin/pen/ebbaMa" target="_blank"><code>DEMO5</code></a><ul>
+<li>垂直水平居中布局<a href="//codepen.io/zhiyuchangxin/pen/roogaQ" target="_blank"><code>DEMO4</code></a></li>
+<li>两栏自适应布局<a href="//codepen.io/zhiyuchangxin/pen/ebbaMa" target="_blank"><code>DEMO5</code></a><ul>
 <li>注意<code>margin-right</code>生效的前提是：盒子为行块<code>inline-block</code>元素不定宽</li>
 </ul>
 </li>
-<li>两端对齐布局<a href="https://codepen.io/zhiyuchangxin/pen/dwwxqB" target="_blank"><code>DEMO6</code></a></li>
-<li>两栏等高布局<a href="https://codepen.io/zhiyuchangxin/pen/ZVVgVo" target="_blank"><code>DEMO7</code></a></li>
+<li>两端对齐布局<a href="//codepen.io/zhiyuchangxin/pen/dwwxqB" target="_blank"><code>DEMO6</code></a></li>
+<li>两栏等高布局<a href="//codepen.io/zhiyuchangxin/pen/ZVVgVo" target="_blank"><code>DEMO7</code></a></li>
 </ul>
 <blockquote>
 <p>此处“两栏等高布局”实现的缺点：<br>1.没有底部边框，需手动添加（无需边框的场景比较方便）<br>2.父元素<code>overflow:hidden</code>对子元素有一定的局限性（子元素定位到容器之外的场景不适用）<br>3.影响锚点定位</p>
@@ -628,7 +628,7 @@
   <div class="-mob-share-close">取消</div>
 </div>
 <div class="-mob-share-ui-bg"></div>
-<script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=29cf309dee380"></script>
+<script id="-mob-share" src="//f1.webshare.mob.com/code/mob-share.js?appkey=29cf309dee380"></script>
 <!--MOB SHARE END-->
 
       
@@ -678,7 +678,7 @@
       
 
       <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://cdn.zhiyuchangxin.cn/qb_01.png"
                alt="织语长心" />
@@ -792,12 +792,12 @@
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="//hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+  <a class="theme-link" href="//github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
 </div>
@@ -805,22 +805,10 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">
-      <i class="fa fa-user"></i> 访问人数
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
 
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i> 总访问量
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
   
 </div>
 
@@ -943,12 +931,12 @@
       var conf = 'a5f34cc39601f5a23eef03499881129c';
       var width = window.innerWidth || document.documentElement.clientWidth;
       if (width < 960) {
-      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){
         window.changyan.api.config({appid:appid,conf:conf})});
       }
     })();
     </script>
-    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+    <script type="text/javascript" src="//assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
   
 
 
