@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://blog.zhiyuchangxin.cn/"/>
   <updated>2019-01-17T12:45:48.913Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://blog.zhiyuchangxin.cn/</id>
   
   <author>
     <name>织语长心</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>破除 Margin 的黑魔法</title>
-    <link href="http://yoursite.com/2019/01/09/margin/"/>
-    <id>http://yoursite.com/2019/01/09/margin/</id>
+    <link href="http://blog.zhiyuchangxin.cn/2019/01/09/margin/"/>
+    <id>http://blog.zhiyuchangxin.cn/2019/01/09/margin/</id>
     <published>2019-01-09T06:30:00.000Z</published>
     <updated>2019-01-17T12:45:48.913Z</updated>
     
@@ -32,14 +32,14 @@
     </summary>
     
     
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+      <category term="css" scheme="http://blog.zhiyuchangxin.cn/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>谁还没遇上“层叠上下文”呢</title>
-    <link href="http://yoursite.com/2018/09/10/StackingContext/"/>
-    <id>http://yoursite.com/2018/09/10/StackingContext/</id>
+    <link href="http://blog.zhiyuchangxin.cn/2018/09/10/StackingContext/"/>
+    <id>http://blog.zhiyuchangxin.cn/2018/09/10/StackingContext/</id>
     <published>2018-09-10T07:00:00.000Z</published>
     <updated>2019-01-17T07:06:01.718Z</updated>
     
@@ -52,14 +52,14 @@
     </summary>
     
     
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+      <category term="css" scheme="http://blog.zhiyuchangxin.cn/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>2017 年终总结</title>
-    <link href="http://yoursite.com/2018/01/18/first/"/>
-    <id>http://yoursite.com/2018/01/18/first/</id>
+    <link href="http://blog.zhiyuchangxin.cn/2018/01/18/first/"/>
+    <id>http://blog.zhiyuchangxin.cn/2018/01/18/first/</id>
     <published>2018-01-18T14:08:00.000Z</published>
     <updated>2018-12-21T05:18:04.048Z</updated>
     
@@ -72,7 +72,7 @@
     </summary>
     
     
-      <category term="thinking" scheme="http://yoursite.com/tags/thinking/"/>
+      <category term="thinking" scheme="http://blog.zhiyuchangxin.cn/tags/thinking/"/>
     
   </entry>
   

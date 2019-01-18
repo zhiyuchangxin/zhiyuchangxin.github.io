@@ -1893,7 +1893,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #874f6f;
+  background: #36ff6f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2975,7 +2975,7 @@ hr {
 }
 code {
   margin: 2px;
-  color: #fabf51;
+  color: #fba222;
   background: #fbf7f8;
   font-size: 14px;
 }
@@ -3057,7 +3057,7 @@ p {
   border: 1px solid #f9a135;
   border-radius: 5px;
   background: transparent;
-  color: #f9a135;
+  color: #fba222;
   font-weight: 400;
 }
 .snow-box {
