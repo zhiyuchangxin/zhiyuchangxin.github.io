@@ -1893,7 +1893,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffb1ff;
+  background: #738318;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2831,7 +2831,7 @@ hr {
   display: none;
 }
 .posts-expand .post {
-  margin-top: 120px;
+  margin-top: 50px;
 }
 .posts-expand .post:first-child {
   margin-top: 0;
@@ -2876,7 +2876,7 @@ hr {
   margin-top: 40px;
 }
 .post-button {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: left;
 }
 .post-button a {
@@ -3035,9 +3035,10 @@ p {
 .page-home .post-gallery .post-gallery-img img {
   margin-top: 8px;
   width: 100%;
-  max-height: 168px;
-  background: #fff;
+  height: 110px;
+  background: #eaeaea;
   border-radius: 5px;
+  object-fit: contain;
 }
 .page-post-detail .post-gallery {
   display: none;
@@ -3120,6 +3121,9 @@ canvas {
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
+}
+#pop_ad {
+  display: none;
 }
 .night-mode {
   background: #333;
@@ -3227,6 +3231,15 @@ canvas {
 .night-mode .-mob-share-ui-button:hover {
   background: rgba(102,102,102,0.3);
   font-weight: 500;
+}
+.night-mode .posts-collapse .post-title a {
+  color: #bbb;
+}
+.night-mode .posts-collapse .post-title a:hover {
+  color: #87daff;
+}
+.night-mode .posts-collapse .post-header:hover {
+  border-bottom-color: #fff;
 }
 .day-mode::before {
   content: '';
